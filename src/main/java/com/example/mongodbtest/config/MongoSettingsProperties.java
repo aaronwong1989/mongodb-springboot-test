@@ -1,8 +1,7 @@
-package com.example.mongodbtest;
+package com.example.mongodbtest.config;
 
 import java.util.List;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 /**
  * @author aaron

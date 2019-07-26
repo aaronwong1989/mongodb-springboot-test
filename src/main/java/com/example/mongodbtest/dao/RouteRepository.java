@@ -1,4 +1,4 @@
-package com.example.mongodbtest;
+package com.example.mongodbtest.dao;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

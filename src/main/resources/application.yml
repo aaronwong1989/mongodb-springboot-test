@@ -3,11 +3,12 @@ spring:
     mongodb:
       custom:
         hosts:
-          - 127.0.0.1:27017
-          - 127.0.0.1:28017
+          - 192.168.182.131:27017
+          - 192.168.182.132:27017
+          - 192.168.182.133:27017
         replica-set: replset01
         username: opbuser
-        password: opb@123
+        password: opbuser
         database: opbdb
         # 这里可能是别的数据库，看你的用户创建在哪个数据库，一般而言是同一个，因为如果是它库，这必然是个超级用户，不建议
         authentication-database: opbdb
@@ -18,3 +19,8 @@ logging:
   level:
     org.mongodb: debug
     cn.com.zybank: debug
+
+server:
+  undertow:
+    io-threads: 4
+    worker-threads: 16

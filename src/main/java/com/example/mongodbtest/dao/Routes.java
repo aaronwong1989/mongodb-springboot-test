@@ -1,4 +1,4 @@
-package com.example.mongodbtest;
+package com.example.mongodbtest.dao;
 
 import java.util.List;
 import lombok.Builder;
@@ -12,11 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Builder
 @Document(collection = "myRoutes")
-class Routes {
+public class Routes {
 
   @Id
   private Long id;
   private String routeName;
   private String routePath;
+  private String filter;
   private List<String> blacklist;
 }

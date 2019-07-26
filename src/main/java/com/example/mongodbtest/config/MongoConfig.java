@@ -1,4 +1,4 @@
-package com.example.mongodbtest;
+package com.example.mongodbtest.config;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
@@ -57,8 +57,7 @@ public class MongoConfig {
     // MongoDB地址列表
     List<ServerAddress> serverAddresses = new ArrayList<>();
     for (String host : mongoSettingsProperties.getHosts()) {
-      ServerAddress serverAddress = new ServerAddress(host);
-      serverAddresses.add(serverAddress);
+      serverAddresses.add(new ServerAddress(host));
     }
     if (log.isInfoEnabled()) {
       log.info("MongoDB ReplicaSet serverAddresses:{}", serverAddresses.toString());
